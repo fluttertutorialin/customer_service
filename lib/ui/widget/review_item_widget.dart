@@ -22,11 +22,6 @@ class ReviewItemWidget extends StatelessWidget {
                         width: 65,
                         fit: BoxFit.cover,
                         imageUrl:  'http://lorempixel.com/400/400/business/4/',
-                        placeholder: (context, url) => Image.asset(
-                            'assets/icon/icon.png',
-                            fit: BoxFit.cover,
-                            height: 65,
-                            width: 65),
                         errorWidget: (context, url, error) =>
                             const Icon(Icons.error_outline))),
                 const SizedBox(width: 15),

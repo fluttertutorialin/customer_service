@@ -23,10 +23,6 @@ class SlideImageItemWidget extends StatelessWidget {
               height: 310,
               fit: BoxFit.cover,
               imageUrl: url,
-              placeholder: (context, url) => Image.asset(
-                  'assets/img/loading.gif',
-                  fit: BoxFit.cover,
-                  width: double.infinity),
               errorWidget: (context, url, error) =>
                   const Icon(Icons.error_outline))),
       Container(

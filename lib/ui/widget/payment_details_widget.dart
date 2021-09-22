@@ -21,11 +21,6 @@ class PaymentDetailsWidget extends StatelessWidget {
                     width: 80,
                     fit: BoxFit.cover,
                     imageUrl: '',
-                    placeholder: (context, url) => Image.asset(
-                        'assets/img/loading.gif',
-                        fit: BoxFit.cover,
-                        width: double.infinity,
-                        height: 80),
                     errorWidget: (context, url, error) =>
                         const Icon(Icons.error_outline))),
   /*          Container(

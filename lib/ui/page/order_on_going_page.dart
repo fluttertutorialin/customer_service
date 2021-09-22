@@ -50,11 +50,6 @@ class OrderOnGoingPage extends StatelessWidget {
                                       width: double.infinity,
                                       fit: BoxFit.cover,
                                       imageUrl: 'http://lorempixel.com/200/200/business/5/',
-                                      placeholder: (context, url) =>
-                                          Image.asset('assets/img/loading.gif',
-                                              fit: BoxFit.cover,
-                                              width: double.infinity,
-                                              height: 100),
                                       errorWidget: (context, url, error) =>
                                           const Icon(Icons.error_outline))),
                               AnimatedContainer(
@@ -118,11 +113,6 @@ class OrderOnGoingPage extends StatelessWidget {
                       width: 70,
                       fit: BoxFit.cover,
                       imageUrl: 'http://lorempixel.com/200/200/business/5/',
-                      placeholder: (context, url) => Image.asset(
-                          'assets/img/loading.gif',
-                          fit: BoxFit.cover,
-                          width: double.infinity,
-                          height: 70),
                       errorWidget: (context, url, error) =>
                           const Icon(Icons.error_outline))),
               const SizedBox(width: 20),

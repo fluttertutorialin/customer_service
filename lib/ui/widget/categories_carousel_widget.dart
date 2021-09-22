@@ -59,10 +59,6 @@ class CategoriesCarouselWidget extends StatelessWidget {
                                         : CachedNetworkImage(
                                             fit: BoxFit.cover,
                                             imageUrl: '',
-                                            placeholder: (context, url) =>
-                                                Image.asset(
-                                                    'assets/img/loading.gif',
-                                                    fit: BoxFit.cover),
                                             errorWidget: (context, url,
                                                     error) =>
                                                 const Icon(Icons.error_outline))))),

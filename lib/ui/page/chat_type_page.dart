@@ -111,10 +111,6 @@ class ChatTypeView extends StatelessWidget {
                               width: double.infinity,
                               fit: BoxFit.cover,
                               imageUrl: '',
-                              placeholder: (context, url) => Image.asset(
-                                  'assets/img/loading.gif',
-                                  fit: BoxFit.cover,
-                                  width: double.infinity),
                               errorWidget: (context, url, error) =>
                                   const Icon(Icons.error_outline))))
                 ])));
@@ -147,10 +143,6 @@ class ChatTypeView extends StatelessWidget {
                             width: double.infinity,
                             fit: BoxFit.cover,
                             imageUrl: '',
-                            placeholder: (context, url) => Image.asset(
-                                'assets/img/loading.gif',
-                                fit: BoxFit.cover,
-                                width: double.infinity),
                             errorWidget: (context, url, error) =>
                                 const Icon(Icons.error_outline),
                           ))),

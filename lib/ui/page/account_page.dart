@@ -65,11 +65,6 @@ class AccountPage extends StatelessWidget {
                         width: 100,
                         fit: BoxFit.cover,
                         imageUrl: 'http://lorempixel.com/400/400/business/4/',
-                        placeholder: (context, url) => Image.asset(
-                            'assets/icon/icon.png',
-                            fit: BoxFit.cover,
-                            width: double.infinity,
-                            height: 100),
                         errorWidget: (context, url, error) =>
                             const Icon(Icons.error_outline))))
           ]),
