@@ -1,16 +1,47 @@
 # customer_service
 
-A new Flutter project.
+<h3 align="center">
+    <br> 
+    Service provider client application. On - Demand Home Service, Business Listing, Easy to find.
+    Also, the app shows customer's reviews amd ratings for each service that they make a booking.
+</h3>
 
-## Getting Started
+# Website
+**www.fluttertutorial.in provides free UI Kit and youtube video [Open link](https://www.youtube.com/watch?v=5wPts2eIfF4)**
 
-This project is a starting point for a Flutter application.
+<p align="center">
+  <img alt="" src="screenshot\device-2021-10-01-082707.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-082716.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-082743.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-082801.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-082812.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-082822.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-082833.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-082844.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-082853.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-082903.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-082917.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-082928.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-083015.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-083029.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-083042.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-083320.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-083330.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-083421.png" width="180"/>
+  <img alt="" src="screenshot\device-2021-10-01-083458.png" width="180"/>
 
-A few resources to get you started if this is your first Flutter project:
+</p>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# APPLICATION FUNCTIONALITY
+<h6>
+    <br>
+    APPLICATION FUNCTIONALITY <br>
+    1) Change language <br>
+    2) Change the theme <br>
+    3) GetX service use <br>
+    4) Flutter 2.5.1 support <br>
+    5) Easy to services are search <br>
+    6) Support languages are English, Spanish and Arabic. 
+</h6>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
