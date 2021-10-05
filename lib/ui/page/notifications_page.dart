@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../widget/notification_widget.dart';
+import '../../model/notification_admin.dart';
+import '../widget/builder/custom_list_view_builder.dart';
 
 class NotificationsPage extends StatelessWidget {
   const NotificationsPage({Key? key}) : super(key: key);
@@ -31,14 +33,50 @@ class NotificationsPage extends StatelessWidget {
   }
 
   Widget notificationsList() {
-    return ListView.separated(
-        itemCount: 10,
-        separatorBuilder: (context, index) {
-          return const SizedBox(height: 7);
-        },
-        shrinkWrap: true,
-        primary: false,
-        itemBuilder: (context, index) {
+    List<NotificationAdmin> notificationList = [
+      NotificationAdmin(
+          title: 'Notification title',
+          notificationSentTime: '26, February 2021 | 04::34'),
+      NotificationAdmin(
+          title: 'Notification title',
+          notificationSentTime: '26, February 2021 | 04::34'),
+      NotificationAdmin(
+          title: 'Notification title',
+          notificationSentTime: '26, February 2021 | 04::34'),
+      NotificationAdmin(
+          title: 'Notification title',
+          notificationSentTime: '26, February 2021 | 04::34'),
+      NotificationAdmin(
+          title: 'Notification title',
+          notificationSentTime: '26, February 2021 | 04::34'),
+      NotificationAdmin(
+          title: 'Notification title',
+          notificationSentTime: '26, February 2021 | 04::34'),
+      NotificationAdmin(
+          title: 'Notification title',
+          notificationSentTime: '26, February 2021 | 04::34'),
+      NotificationAdmin(
+          title: 'Notification title',
+          notificationSentTime: '26, February 2021 | 04::34'),
+      NotificationAdmin(
+          title: 'Notification title',
+          notificationSentTime: '26, February 2021 | 04::34'),
+      NotificationAdmin(
+          title: 'Notification title',
+          notificationSentTime: '26, February 2021 | 04::34'),
+      NotificationAdmin(
+          title: 'Notification title',
+          notificationSentTime: '26, February 2021 | 04::34'),
+      NotificationAdmin(
+          title: 'Notification title',
+          notificationSentTime: '26, February 2021 | 04::34'),
+      NotificationAdmin(
+          title: 'Notification title',
+          notificationSentTime: '26, February 2021 | 04::34'),
+    ];
+    return CustomListViewBuilder<NotificationAdmin>(
+        items: notificationList,
+        itemBuilder: (context, measurement, i) {
           return const NotificationWidget();
         });
   }
