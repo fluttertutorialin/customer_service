@@ -1,4 +1,3 @@
-import 'package:customer_service/ui/component/fade_slide_transition.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -55,32 +54,22 @@ class CheckboxListView extends StatelessWidget {
 
           assert(opacityEnd <= 1);
 
-          return FadeSlideTransition(
-              beginOffset: const Offset(0.75, 0),
-              // endOffset: Offset.zero,
-              offsetBeginInterval: offsetBegin,
-              offsetEndInterval: offsetEnd,
-              offsetCurves: offsetCurves,
-              opacityBeginInterval: opacityBegin,
-              opacityEndInterval: opacityEnd,
-              opacityCurves: opacityCurves,
-              child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Container(
-                          color: checked(item)
-                              ? const Color(0xffdd4124)
-                              : const Color(0xff3C3C3C),
-                          child: CheckboxListTile(
-                              activeColor: const Color(0xffa6301b),
-                              title: Text(getTitle(item)),
-                              controlAffinity: ListTileControlAffinity.trailing,
-                              value: checked(item),
-                              selected: checked(item),
-                              onChanged: (bool? checked) =>
-                                  onChangedMainMuscleEnum(checked, item))))));
+          return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Container(
+                      color: checked(item)
+                          ? const Color(0xffdd4124)
+                          : const Color(0xff3C3C3C),
+                      child: CheckboxListTile(
+                          activeColor: const Color(0xffa6301b),
+                          title: Text(getTitle(item)),
+                          controlAffinity: ListTileControlAffinity.trailing,
+                          value: checked(item),
+                          selected: checked(item),
+                          onChanged: (bool? checked) =>
+                              onChangedMainMuscleEnum(checked, item)))));
         });
   }
 }
