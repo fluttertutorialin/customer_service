@@ -12,12 +12,12 @@ class MainTabPage extends GetView<MainTabController> {
     return GetBuilder<MainTabController>(builder: (controller) {
       return Scaffold(
           drawer: const Drawer(child: DrawerWidget(), elevation: 0),
-          body: IndexedStack(index: controller.tabIndex, children: const [
+          body: Obx(() => IndexedStack(index: controller.tabIndex.value, children: const [
             HomePage(),
             OrderPage(),
             ChatPage(),
             AccountPage()
-          ]),
+          ])),
           bottomNavigationBar: BottomNavigationBar(
               items: <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
@@ -34,7 +34,7 @@ class MainTabPage extends GetView<MainTabController> {
                     label: 'profile'.tr)
               ],
               backgroundColor: context.theme.scaffoldBackgroundColor,
-              currentIndex: controller.tabIndex,
+              currentIndex: controller.tabIndex.value,
               selectedItemColor: context.theme.accentColor,
               onTap: (index) => controller.changeTabIndex(index),
               type: BottomNavigationBarType.fixed));

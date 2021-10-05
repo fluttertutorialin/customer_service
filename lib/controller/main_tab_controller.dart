@@ -3,15 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class MainTabController extends GetxController {
-  var tabIndex = 0;
+  RxInt tabIndex = RxInt(0);
 
   void changeTabIndex(int index) {
-    tabIndex = index;
-    update();
+    tabIndex.value = index;
   }
 
   void changePageOutRoot(int _index) {
-    tabIndex = _index;
+    tabIndex.value = _index;
     Get.offNamedUntil(RouteName.mainTabRoute, (Route route) {
       if (route.settings.name == RouteName.mainTabRoute) {
         return true;

@@ -10,9 +10,8 @@ class RecommendedCarouselWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         height: 345,
-        color: Get.theme.primaryColor,
         child: ListView.builder(
             padding: const EdgeInsets.only(bottom: 10),
             primary: false,

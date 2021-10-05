@@ -34,7 +34,7 @@ class HomePage extends GetView<HomeController> {
                   centerTitle: true,
                   automaticallyImplyLeading: false,
                   leading: IconButton(
-                      icon: const Icon(Icons.sort, color: Colors.black87),
+                      icon: Icon(Icons.sort, color: Get.theme.hintColor),
                       onPressed: () => {Scaffold.of(context).openDrawer()}),
                   bottom: const SearchBarWidget(),
                   flexibleSpace: FlexibleSpaceBar(
@@ -79,7 +79,6 @@ class HomePage extends GetView<HomeController> {
                     ])),
                 const CategoriesCarouselWidget(),
                 Container(
-                    color: Get.theme.primaryColor,
                     padding:
                         const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                     child: Row(children: [
@@ -94,7 +93,7 @@ class HomePage extends GetView<HomeController> {
                           child: Text('viewAll'.tr,
                               style: Get.textTheme.subtitle1))
                     ])),
-                const RecommendedCarouselWidget(),
+                 RecommendedCarouselWidget(),
               ])),
             ])));
   }
