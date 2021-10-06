@@ -20,4 +20,4 @@ export 'checkout_page.dart';
 export 'confirmation_page.dart';
 export 'order_page.dart';
 export 'category_list_page.dart';
-export 'notification_detail_page.dart';
+export 'notifications_new_page.dart';

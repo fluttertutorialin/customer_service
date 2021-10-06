@@ -1,22 +1,19 @@
-import 'dart:ui';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:customer_service/ui/widget/max_width_raised_button.dart';
-import 'package:customer_service/ui/widget/notification_widget.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:intl/intl.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import '../widget/max_width_raised_button.dart';
+import '../widget/notification_widget.dart';
 
-class NotificationDetailPage extends StatefulWidget {
-  const NotificationDetailPage({
+class NotificationNewPage extends StatefulWidget {
+  const NotificationNewPage({
     Key? key,
   }) : super(key: key);
 
   @override
-  createState() => _NotificationDetailState();
+  createState() => _NotificationNewState();
 }
 
-class _NotificationDetailState extends State<NotificationDetailPage>
+class _NotificationNewState extends State<NotificationNewPage>
     with TickerProviderStateMixin {
   final List<String> _tabs = ['Today', 'Past'];
 

@@ -33,7 +33,7 @@ class RouteCollection {
     GetPage(name: RouteName.helpFaqRoute, page: () => const HelpFaqPage()),
     GetPage(
         name: RouteName.notificationRoute,
-        page: () => const NotificationDetailPage()),
+        page: () => const NotificationNewPage()),
     GetPage(name: RouteName.profileRoute, page: () => ProfilePage()),
     GetPage(
         name: RouteName.myServiceRoute,
