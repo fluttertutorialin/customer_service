@@ -13,6 +13,8 @@ class CustomListViewBuilder<T> extends StatelessWidget {
     this.emptyContentButton,
     this.emptyContentWidget,
     this.scrollController,
+    this.padding = EdgeInsets.zero,
+    this.shrinkWrap = true,
     this.header = const SizedBox.shrink(),
     this.footer = const SizedBox.shrink(),
   }) : super(key: key);
@@ -23,6 +25,8 @@ class CustomListViewBuilder<T> extends StatelessWidget {
   final Widget? emptyContentButton;
   final Widget? emptyContentWidget;
   final ScrollController? scrollController;
+  final EdgeInsetsGeometry? padding;
+  final bool? shrinkWrap;
   final Widget? header;
   final Widget? footer;
 
@@ -40,9 +44,9 @@ class CustomListViewBuilder<T> extends StatelessWidget {
     return Column(children: [
       header!,
       ListView.builder(
-          padding: EdgeInsets.zero,
+          padding: padding,
           physics: const NeverScrollableScrollPhysics(),
-          shrinkWrap: true,
+          shrinkWrap: shrinkWrap!,
           itemCount: items.length,
           itemBuilder: (context, index) =>
               itemBuilder(context, items[index], index)),

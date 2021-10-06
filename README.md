@@ -44,4 +44,8 @@
     6) Support languages are English, Spanish and Arabic. 
 </h6>
 
-
+# CODING STRUCTURE
+<h6>
+    1) flutter lints use for better the code quality<br>
+    2) CustomListViewBuilder is custom widget<br>
+</h6>
