@@ -12,7 +12,7 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text('profile'.tr, style: context.textTheme.headline6!.merge(const TextStyle(
+            title: Text('profile'.tr, style: Get.textTheme.headline6!.merge(const TextStyle(
                 fontSize: 18))),
             centerTitle: true,
             backgroundColor: Colors.transparent,

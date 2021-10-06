@@ -21,17 +21,17 @@ class OrderPage extends GetView<OrderController> {
                 elevation: 0,
                 automaticallyImplyLeading: false,
                 leading: IconButton(
-                    icon: Icon(Icons.sort, color: Get.theme.hintColor),
+                    icon: Icon(Icons.sort, color: context.theme.hintColor),
                     onPressed: () => {Scaffold.of(context).openDrawer()}),
                 bottom: TabBar(
                     indicatorSize: TabBarIndicatorSize.label,
                     labelPadding: const EdgeInsets.symmetric(horizontal: 15),
-                    unselectedLabelColor: Get.theme.accentColor,
-                    labelColor: Get.theme.primaryColor,
-                    labelStyle: Get.textTheme.bodyText1,
+                    unselectedLabelColor: context.theme.accentColor,
+                    labelColor: context.theme.primaryColor,
+                    labelStyle: context.textTheme.bodyText1,
                     indicator: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Get.theme.accentColor),
+                        color: context.theme.accentColor),
                     tabs: [
                       Tab(
                           child: Container(
@@ -39,8 +39,8 @@ class OrderPage extends GetView<OrderController> {
                                   const EdgeInsets.symmetric(horizontal: 5),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
-                                  color:
-                                      Get.theme.accentColor.withOpacity(0.2)),
+                                  color: context.theme.accentColor
+                                      .withOpacity(0.2)),
                               child: Align(
                                   alignment: Alignment.center,
                                   child: Text('Ongoing'.tr,
@@ -53,8 +53,8 @@ class OrderPage extends GetView<OrderController> {
                                   const EdgeInsets.symmetric(horizontal: 5),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
-                                  color:
-                                      Get.theme.accentColor.withOpacity(0.2)),
+                                  color: context.theme.accentColor
+                                      .withOpacity(0.2)),
                               child: Align(
                                   alignment: Alignment.center,
                                   child: Text('Completed'.tr,
@@ -67,8 +67,8 @@ class OrderPage extends GetView<OrderController> {
                                   const EdgeInsets.symmetric(horizontal: 5),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
-                                  color:
-                                      Get.theme.accentColor.withOpacity(0.2)),
+                                  color: context.theme.accentColor
+                                      .withOpacity(0.2)),
                               child: Align(
                                   alignment: Alignment.center,
                                   child: Text('Archived'.tr,

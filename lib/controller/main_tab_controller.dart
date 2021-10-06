@@ -17,7 +17,5 @@ class MainTabController extends GetxController {
       }
       return false;
     }, arguments: _index);
-
-    update();
   }
 }

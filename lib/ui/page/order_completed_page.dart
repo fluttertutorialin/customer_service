@@ -38,43 +38,43 @@ class OrderCompletedPage extends StatelessWidget {
                         children: <Widget>[
                       Row(children: [
                         Text('Title',
-                            style: Get.textTheme.bodyText2, maxLines: 3)
+                            style: context.textTheme.bodyText2, maxLines: 3)
                       ]),
                       const Divider(height: 8, thickness: 1),
                       Row(children: [
                         Expanded(
                             flex: 1,
                             child: Text('yourReview'.tr,
-                                style: Get.textTheme.bodyText1)),
+                                style: context.textTheme.bodyText1)),
                         Wrap(spacing: 0, children: getStarsList(0.0))
                       ]),
                       Row(children: [
                         Expanded(
                             child: Text('time'.tr,
-                                style: Get.textTheme.bodyText1)),
-                        Text('13:31 | 2020-11-05', style: Get.textTheme.caption)
+                                style: context.textTheme.bodyText1)),
+                        Text('13:31 | 2020-11-05', style: context.textTheme.caption)
                       ]),
                       Row(children: [
                         Expanded(
                             child: Text('totalPrice'.tr,
-                                style: Get.textTheme.bodyText1)),
-                        getPrice(100.00, style: Get.textTheme.headline6)
+                                style: context.textTheme.bodyText1)),
+                        getPrice(100.00, style: context.textTheme.headline6)
                       ]),
                       Wrap(spacing: 10, children: [
                         MaterialButton(
                             elevation: 0,
                             onPressed: () {},
                             shape: const StadiumBorder(),
-                            color: Get.theme.accentColor.withOpacity(0.1),
+                            color: context.theme.accentColor.withOpacity(0.1),
                             child: Text('rating'.tr,
-                                style: Get.textTheme.subtitle1)),
+                                style: context.textTheme.subtitle1)),
                         MaterialButton(
                             elevation: 0,
                             onPressed: () {},
                             shape: const StadiumBorder(),
-                            color: Get.theme.accentColor.withOpacity(0.1),
+                            color: context.theme.accentColor.withOpacity(0.1),
                             child: Text('reBooking'.tr,
-                                style: Get.textTheme.subtitle1))
+                                style: context.textTheme.subtitle1))
                       ])
                     ]))
               ]));

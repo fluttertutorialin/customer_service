@@ -9,35 +9,35 @@ class MainTabPage extends GetView<MainTabController> {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MainTabController>(builder: (controller) {
-      return Scaffold(
-          drawer: const Drawer(child: DrawerWidget(), elevation: 0),
-          body: Obx(() => IndexedStack(index: controller.tabIndex.value, children: const [
-            HomePage(),
-            OrderPage(),
-            ChatPage(),
-            AccountPage()
-          ])),
-          bottomNavigationBar: BottomNavigationBar(
-              items: <BottomNavigationBarItem>[
-                BottomNavigationBarItem(
-                    icon: const Icon(Icons.home_outlined, size: 24),
-                    label: 'home'.tr),
-                BottomNavigationBarItem(
-                    icon: const Icon(Icons.update, size: 24),
-                    label: 'booking'.tr),
-                BottomNavigationBarItem(
-                    icon: const Icon(Icons.chat_bubble_outline, size: 24),
-                    label: 'chat'.tr),
-                BottomNavigationBarItem(
-                    icon: const Icon(Icons.person_outline, size: 24),
-                    label: 'profile'.tr)
-              ],
-              backgroundColor: context.theme.scaffoldBackgroundColor,
-              currentIndex: controller.tabIndex.value,
-              selectedItemColor: context.theme.accentColor,
-              onTap: (index) => controller.changeTabIndex(index),
-              type: BottomNavigationBarType.fixed));
-    });
+    return Scaffold(
+        drawer: const Drawer(child: DrawerWidget(), elevation: 0),
+        body: Obx(() => IndexedStack(
+                index: controller.tabIndex.value,
+                children: const [
+                  HomePage(),
+                  OrderPage(),
+                  ChatPage(),
+                  AccountPage()
+                ])),
+        bottomNavigationBar: Obx(() => BottomNavigationBar(
+                items: <BottomNavigationBarItem>[
+                  BottomNavigationBarItem(
+                      icon: const Icon(Icons.home_outlined, size: 24),
+                      label: 'home'.tr),
+                  BottomNavigationBarItem(
+                      icon: const Icon(Icons.update, size: 24),
+                      label: 'booking'.tr),
+                  BottomNavigationBarItem(
+                      icon: const Icon(Icons.chat_bubble_outline, size: 24),
+                      label: 'chat'.tr),
+                  BottomNavigationBarItem(
+                      icon: const Icon(Icons.person_outline, size: 24),
+                      label: 'profile'.tr)
+                ],
+                backgroundColor: context.theme.scaffoldBackgroundColor,
+                currentIndex: controller.tabIndex.value,
+                selectedItemColor: context.theme.accentColor,
+                onTap: (index) => controller.changeTabIndex(index),
+                type: BottomNavigationBarType.fixed)));
   }
 }

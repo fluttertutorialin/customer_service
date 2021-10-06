@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../controller/controller.dart';
 import '../widget/block_button_widget.dart';
+import '../../controller/controller.dart';
 
-class ConfirmationPage extends StatelessWidget {
+class ConfirmationPage extends GetView<MainTabController> {
   const ConfirmationPage({Key? key}) : super(key: key);
 
   @override
@@ -77,10 +77,10 @@ class ConfirmationPage extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: Get.textTheme.headline4))
                 ])),
-        bottomNavigationBar: buildBlockButtonWidget());
+        bottomNavigationBar: _buildBlockButtonWidget());
   }
 
-  Widget buildBlockButtonWidget() {
+  _buildBlockButtonWidget() {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
@@ -105,7 +105,7 @@ class ConfirmationPage extends StatelessWidget {
           ]),
           color: Get.theme.accentColor,
           onPressed: () {
-            Get.find<MainTabController>().changePageOutRoot(1);
+            controller.changePageOutRoot(1);
           }).paddingOnly(bottom: 20, right: 20, left: 20),
     );
   }

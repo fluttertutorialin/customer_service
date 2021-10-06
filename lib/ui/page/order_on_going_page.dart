@@ -34,7 +34,8 @@ class OrderOnGoingPage extends StatelessWidget {
                                 const BorderRadius.all(Radius.circular(10)),
                             boxShadow: [
                               BoxShadow(
-                                  color: Get.theme.focusColor.withOpacity(0.1),
+                                  color:
+                                      context.theme.focusColor.withOpacity(0.1),
                                   blurRadius: 10,
                                   offset: const Offset(0, 5))
                             ]),
@@ -49,7 +50,8 @@ class OrderOnGoingPage extends StatelessWidget {
                                       height: 100,
                                       width: double.infinity,
                                       fit: BoxFit.cover,
-                                      imageUrl: 'http://lorempixel.com/200/200/business/5/',
+                                      imageUrl:
+                                          'http://lorempixel.com/200/200/business/5/',
                                       errorWidget: (context, url, error) =>
                                           const Icon(Icons.error_outline))),
                               AnimatedContainer(
@@ -58,7 +60,7 @@ class OrderOnGoingPage extends StatelessWidget {
                                       vertical: 12, horizontal: 10),
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                      color: Get.theme.primaryColor,
+                                      color: context.theme.primaryColor,
                                       borderRadius: const BorderRadius.only(
                                           bottomLeft: Radius.circular(10),
                                           bottomRight: Radius.circular(10))),
@@ -73,21 +75,22 @@ class OrderOnGoingPage extends StatelessWidget {
                                           maxLines: 1,
                                           softWrap: false,
                                           overflow: TextOverflow.fade,
-                                          style: Get.textTheme.bodyText2!.merge(
-                                              TextStyle(
-                                                  color: Get.theme.hintColor)),
+                                          style: context.textTheme.bodyText2!
+                                              .merge(TextStyle(
+                                                  color:
+                                                      context.theme.hintColor)),
                                         ),
                                         const SizedBox(height: 5),
                                         Text('November 5, 2020',
-                                            style: Get.textTheme.caption!.merge(
-                                                TextStyle(
-                                                    color:
-                                                        Get.theme.focusColor))),
+                                            style: context.textTheme.caption!
+                                                .merge(TextStyle(
+                                                    color: context
+                                                        .theme.focusColor))),
                                         Text('At 13:31',
-                                            style: Get.textTheme.caption!.merge(
-                                                TextStyle(
-                                                    color:
-                                                        Get.theme.focusColor)))
+                                            style: context.textTheme.caption!
+                                                .merge(TextStyle(
+                                                    color: context
+                                                        .theme.focusColor)))
                                       ]))
                             ])));
               })),
@@ -95,11 +98,11 @@ class OrderOnGoingPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           decoration: BoxDecoration(
-              color: Get.theme.primaryColor,
+              color: context.theme.primaryColor,
               borderRadius: const BorderRadius.all(Radius.circular(10)),
               boxShadow: [
                 BoxShadow(
-                    color: Get.theme.focusColor.withOpacity(0.1),
+                    color: context.theme.focusColor.withOpacity(0.1),
                     blurRadius: 10,
                     offset: const Offset(0, 5))
               ]),
@@ -119,16 +122,16 @@ class OrderOnGoingPage extends StatelessWidget {
               Expanded(
                   child: Wrap(spacing: 5, direction: Axis.vertical, children: [
                 Text('Service name',
-                    style: Get.textTheme.bodyText2, maxLines: 3),
+                    style: context.textTheme.bodyText2, maxLines: 3),
                 Container(
                     padding: const EdgeInsets.only(
                         right: 12, left: 12, top: 6, bottom: 6),
                     decoration: BoxDecoration(
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5)),
-                        color: Get.theme.focusColor.withOpacity(0.1)),
+                        color: context.theme.focusColor.withOpacity(0.1)),
                     child: Text('completed'.tr,
-                        style: TextStyle(color: Get.theme.hintColor)))
+                        style: TextStyle(color: context.theme.hintColor)))
               ]))
             ]),
             const Divider(thickness: 1, height: 40),
@@ -151,12 +154,14 @@ class OrderOnGoingPage extends StatelessWidget {
                 description: 'Tax Amount'.tr,
                 child: Align(
                     alignment: Alignment.centerRight,
-                    child: getPrice(18.46, style: Get.textTheme.bodyText2))),
+                    child:
+                        getPrice(18.46, style: context.textTheme.bodyText2))),
             OnGoingWidget(
                 description: 'Total Amount'.tr,
                 child: Align(
                     alignment: Alignment.centerRight,
-                    child: getPrice(145.46, style: Get.textTheme.headline6)),
+                    child:
+                        getPrice(145.46, style: context.textTheme.headline6)),
                 hasDivider: true),
             OnGoingWidget(
                 description: 'Address'.tr,
