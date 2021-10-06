@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:customer_service/ui/widget/max_width_raised_button.dart';
+import 'package:customer_service/ui/widget/notification_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -71,14 +72,13 @@ class _NotificationDetailState extends State<NotificationDetailPage>
     BuildContext context,
     bool innerBoxIsScrolled,
   ) {
-    final size = MediaQuery.of(context).size;
-
     return AnimatedBuilder(
         animation: _textAnimationController,
         builder: (context, child) => SliverAppBar(
             forceElevated: innerBoxIsScrolled,
             leading: IconButton(
-                icon: Icon(Icons.arrow_back_ios, color: Get.theme.hintColor),
+                icon:
+                    Icon(Icons.arrow_back_ios, color: context.theme.hintColor),
                 onPressed: () => Get.back()),
             title: Transform.translate(
                 offset: _transTween.value,
@@ -88,7 +88,7 @@ class _NotificationDetailState extends State<NotificationDetailPage>
             pinned: true,
             // snap: false,
             stretch: true,
-            expandedHeight: size.height / 2,
+            expandedHeight: Get.height / 2,
             centerTitle: true,
             bottom: PreferredSize(
                 preferredSize: const Size.fromHeight(48),
@@ -98,7 +98,7 @@ class _NotificationDetailState extends State<NotificationDetailPage>
                         labelColor: Get.theme.hintColor,
                         tabs: _tabs.map((e) => Tab(text: e)).toList()))),
             flexibleSpace: _buildFlexibleSpaceBarWidget()),
-        child: Text('Notification Detail',
+        child: Text('notification'.tr,
             style:
                 Get.textTheme.headline6!.merge(const TextStyle(fontSize: 18))));
   }
@@ -109,7 +109,8 @@ class _NotificationDetailState extends State<NotificationDetailPage>
     return FlexibleSpaceBar(
         background: Stack(fit: StackFit.passthrough, children: [
       CachedNetworkImage(
-        imageUrl: '',
+        imageUrl:
+            'http://handyman.smartersvision.com/mock/slides/media/slide0001.jpg',
         errorWidget: (context, url, error) => const Icon(Icons.error),
         fit: BoxFit.cover,
       ),
@@ -125,8 +126,12 @@ class _NotificationDetailState extends State<NotificationDetailPage>
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('Title',
-                    maxLines: 1, overflow: TextOverflow.fade, softWrap: false),
+                Text('Notification Counter',
+                    style: Get.textTheme.headline6!
+              .merge(TextStyle(color: Get.theme.primaryColor)),
+                    maxLines: 1,
+                    overflow: TextOverflow.fade,
+                    softWrap: false),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
@@ -135,10 +140,13 @@ class _NotificationDetailState extends State<NotificationDetailPage>
                           width: size.width / 4,
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const <Widget>[
-                                Text('1'),
-                                SizedBox(height: 8),
-                                Text('2')
+                              children: <Widget>[
+                                Text('Sent', style:  Get.textTheme.bodyText1!
+                                    .merge(const TextStyle(fontWeight: FontWeight.w600))),
+                                const SizedBox(height: 8),
+                                Text('00',
+                                    style: Get.textTheme.bodyText2!.merge(
+                                        TextStyle(color: Get.theme.hintColor)))
                               ])),
                       Container(
                           color: Colors.white.withOpacity(0.1),
@@ -151,10 +159,13 @@ class _NotificationDetailState extends State<NotificationDetailPage>
                           width: size.width / 4,
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const <Widget>[
-                                Text('2'),
-                                SizedBox(height: 8),
-                                Text('4')
+                              children: <Widget>[
+                                Text('Today', style:  Get.textTheme.bodyText1!
+                                    .merge(const TextStyle(fontWeight: FontWeight.w600))),
+                                const SizedBox(height: 8),
+                                Text('00',
+                                    style: Get.textTheme.bodyText2!.merge(
+                                        TextStyle(color: Get.theme.hintColor)))
                               ])),
                       Container(
                           color: Colors.white.withOpacity(0.1),
@@ -166,18 +177,21 @@ class _NotificationDetailState extends State<NotificationDetailPage>
                           width: size.width / 4,
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const <Widget>[
-                                Text('5'),
-                                SizedBox(height: 8),
-                                Text('6')
+                              children: <Widget>[
+                                Text('Past', style:  Get.textTheme.bodyText1!
+                                    .merge(const TextStyle(fontWeight: FontWeight.w600))),
+                                const SizedBox(height: 8),
+                                Text('00',
+                                    style: Get.textTheme.bodyText2!.merge(
+                                        TextStyle(color: Get.theme.hintColor)))
                               ]))
                     ]),
                 const SizedBox(height: 24),
                 MaxWidthRaisedButton(
                     width: double.infinity,
-                    color: Colors.grey,
-                    icon: const Icon(Icons.add_rounded,
-                        color: Colors.white, size: 20),
+                    color: Get.theme.accentColor,
+                    icon: Icon(Icons.add_rounded,
+                        color: Get.theme.primaryColor, size: 20),
                     buttonText: 'ADD NOTIFICATION',
                     onPressed: () {}),
                 const SizedBox(height: 48)
@@ -185,7 +199,11 @@ class _NotificationDetailState extends State<NotificationDetailPage>
     ]));
   }
 
-  Widget _buildTabBarView() {
-    return TabBarView(children: [Container(), Container()]);
+  _buildTabBarView() {
+    return TabBarView(children: [
+      ListView(
+          padding: EdgeInsets.zero, children: const [NotificationWidget()]),
+      ListView(padding: EdgeInsets.zero, children: const [NotificationWidget()])
+    ]);
   }
 }

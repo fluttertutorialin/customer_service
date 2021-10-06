@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MaxWidthRaisedButton extends StatelessWidget {
   final Color? color;
@@ -43,7 +44,8 @@ class MaxWidthRaisedButton extends StatelessWidget {
             Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
           if (icon != null) icon ?? Container(),
           if (icon != null) const SizedBox(width: 16),
-          Text(buttonText)
+          Text(buttonText, style: Get.textTheme.headline6!
+              .merge(TextStyle(color: Get.theme.primaryColor)))
         ]));
   }
 }
