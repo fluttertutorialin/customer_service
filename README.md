@@ -49,3 +49,6 @@
     1) flutter lints use for better the code quality<br>
     2) CustomListViewBuilder is custom widget<br>
 </h6>
+
+# Live preview
+https://www.youtube.com/watch?v=bPYxFIO5oSA
