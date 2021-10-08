@@ -36,14 +36,14 @@ class CategoryListPage extends StatelessWidget {
                       IconButton(
                           onPressed: () {},
                           icon: Icon(Icons.format_list_bulleted,
-                              color:
-                                  Get.theme.focusColor //Get.theme.accentColor
+                              color: Get.theme
+                                  .focusColor // Get.theme.colorScheme.secondary
                               )),
                       IconButton(
                           onPressed: () {},
                           icon: Icon(Icons.apps,
-                              color:
-                                  Get.theme.accentColor //Get.theme.focusColor
+                              color: Get.theme.colorScheme
+                                  .secondary //Get.theme.focusColor
                               ))
                     ])
                   ])),

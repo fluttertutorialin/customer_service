@@ -9,7 +9,7 @@ class HelpFaqPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            backgroundColor: Get.theme.accentColor,
+            backgroundColor: Get.theme.colorScheme.secondary,
             elevation: 0,
             centerTitle: true,
             iconTheme: IconThemeData(color: Get.theme.primaryColor),

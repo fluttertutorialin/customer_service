@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ClickAnimation extends StatefulWidget {
   final Widget child;
-  final Function onTap;
+  final Function? onTap;
 
   const ClickAnimation({Key? key, required this.child, required this.onTap})
       : super(key: key);
@@ -41,7 +41,7 @@ class _ClickAnimationState extends State<ClickAnimation>
           }
           _controller.forward().then((value) {
             _controller.reverse().then((value) {
-              widget.onTap();
+              widget.onTap!();
             });
           });
         },

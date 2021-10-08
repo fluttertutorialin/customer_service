@@ -103,7 +103,7 @@ class ConfirmationPage extends GetView<MainTabController> {
             Icon(Icons.arrow_forward_ios,
                 color: Get.theme.primaryColor, size: 20)
           ]),
-          color: Get.theme.accentColor,
+          color: Get.theme.colorScheme.secondary,
           onPressed: () {
             controller.changePageOutRoot(1);
           }).paddingOnly(bottom: 20, right: 20, left: 20),

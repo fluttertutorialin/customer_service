@@ -25,7 +25,8 @@ class SearchBarWidget extends StatelessWidget implements PreferredSize {
                 child: Row(children: <Widget>[
                   Padding(
                       padding: const EdgeInsets.only(right: 12, left: 0),
-                      child: Icon(Icons.search, color: Get.theme.accentColor)),
+                      child: Icon(Icons.search,
+                          color: Get.theme.colorScheme.secondary)),
                   Expanded(
                       child: Text('searchHint'.tr,
                           maxLines: 1,

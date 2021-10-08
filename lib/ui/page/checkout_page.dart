@@ -139,7 +139,7 @@ class CheckoutPage extends GetView<CheckoutController> {
                 Icon(Icons.arrow_forward_ios,
                     color: Get.theme.primaryColor, size: 20)
               ]),
-              color: Get.theme.accentColor,
+              color: Get.theme.colorScheme.secondary,
               onPressed: () {
                 Get.toNamed(RouteName.confirmationRoute);
               }).paddingSymmetric(vertical: 10, horizontal: 20)

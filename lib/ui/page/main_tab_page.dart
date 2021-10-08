@@ -36,7 +36,7 @@ class MainTabPage extends GetView<MainTabController> {
                 ],
                 backgroundColor: context.theme.scaffoldBackgroundColor,
                 currentIndex: controller.tabIndex.value,
-                selectedItemColor: context.theme.accentColor,
+                selectedItemColor: context.theme.colorScheme.secondary,
                 onTap: (index) => controller.changeTabIndex(index),
                 type: BottomNavigationBarType.fixed)));
   }

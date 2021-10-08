@@ -12,8 +12,9 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text('profile'.tr, style: Get.textTheme.headline6!.merge(const TextStyle(
-                fontSize: 18))),
+            title: Text('profile'.tr,
+                style: Get.textTheme.headline6!
+                    .merge(const TextStyle(fontSize: 18))),
             centerTitle: true,
             backgroundColor: Colors.transparent,
             automaticallyImplyLeading: false,
@@ -44,7 +45,7 @@ class ProfilePage extends StatelessWidget {
                             horizontal: 30, vertical: 12),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
-                        color: Get.theme.accentColor,
+                        color: Get.theme.colorScheme.secondary,
                         child: Text('save'.tr,
                             style: Get.textTheme.bodyText2!.merge(
                                 TextStyle(color: Get.theme.primaryColor))))),

@@ -10,8 +10,9 @@ class SearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text('search'.tr, style: context.textTheme.headline6!.merge(const TextStyle(
-                fontSize: 18))),
+            title: Text('search'.tr,
+                style: context.textTheme.headline6!
+                    .merge(const TextStyle(fontSize: 18))),
             centerTitle: true,
             backgroundColor: Colors.transparent,
             automaticallyImplyLeading: false,
@@ -47,7 +48,8 @@ class SearchPage extends StatelessWidget {
             child: Row(children: <Widget>[
               Padding(
                 padding: const EdgeInsets.only(right: 12, left: 0),
-                child: Icon(Icons.search, color: Get.theme.accentColor),
+                child:
+                    Icon(Icons.search, color: Get.theme.colorScheme.secondary),
               ),
               Expanded(
                   child: Material(
@@ -57,8 +59,8 @@ class SearchPage extends StatelessWidget {
                           onSubmitted: (value) {},
                           autofocus: true,
                           cursorColor: Get.theme.focusColor,
-                          decoration: getInputDecoration(
-                              hintText: 'searchHint'.tr)))),
+                          decoration:
+                              getInputDecoration(hintText: 'searchHint'.tr)))),
               const SizedBox(width: 8),
               GestureDetector(
                   onTap: () {

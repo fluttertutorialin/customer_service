@@ -21,7 +21,7 @@ class ReviewItemWidget extends StatelessWidget {
                         height: 65,
                         width: 65,
                         fit: BoxFit.cover,
-                        imageUrl:  'http://lorempixel.com/400/400/business/4/',
+                        imageUrl: 'http://lorempixel.com/400/400/business/4/',
                         errorWidget: (context, url, error) =>
                             const Icon(Icons.error_outline))),
                 const SizedBox(width: 15),
@@ -53,7 +53,8 @@ class ReviewItemWidget extends StatelessWidget {
                               Icon(Icons.star_border,
                                   color: Get.theme.primaryColor, size: 16)
                             ]),
-                        backgroundColor: Get.theme.accentColor.withOpacity(0.9),
+                        backgroundColor:
+                            Get.theme.colorScheme.secondary.withOpacity(0.9),
                         shape: const StadiumBorder()))
               ]),
           Text('Review description',

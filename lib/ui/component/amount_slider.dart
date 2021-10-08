@@ -129,7 +129,8 @@ class _AmountSliderState extends State<AmountSlider> {
         spaceBetweenDivisions;
     var itemDistanceToCenter;
     if (itemStartPosition < scrollPosition) {
-      itemDistanceToCenter = (xMiddleScreen - itemStartPosition - scrollPosition).abs();
+      itemDistanceToCenter =
+          (xMiddleScreen - itemStartPosition - scrollPosition).abs();
     } else {
       itemDistanceToCenter =
           (xMiddleScreen - itemStartPosition + scrollPosition).abs();

@@ -103,7 +103,8 @@ class BookServicePage extends GetView<BookServiceController> {
                             elevation: 0,
                             onPressed: () {},
                             shape: const StadiumBorder(),
-                            color: Get.theme.accentColor.withOpacity(0.2),
+                            color: Get.theme.colorScheme.secondary
+                                .withOpacity(0.2),
                             child: Text('selectADate'.tr,
                                 style: Get.textTheme.subtitle1))
                       ]),
@@ -118,7 +119,8 @@ class BookServicePage extends GetView<BookServiceController> {
                             elevation: 0,
                             onPressed: () {},
                             shape: const StadiumBorder(),
-                            color: Get.theme.accentColor.withOpacity(0.2),
+                            color: Get.theme.colorScheme.secondary
+                                .withOpacity(0.2),
                             child: Text('selectATime'.tr,
                                 style: Get.textTheme.subtitle1))
                       ])
@@ -162,7 +164,7 @@ class BookServicePage extends GetView<BookServiceController> {
               Icon(Icons.arrow_forward_ios,
                   color: Get.theme.primaryColor, size: 20)
             ]),
-            color: Get.theme.accentColor,
+            color: Get.theme.colorScheme.secondary,
             onPressed: () {
               Get.toNamed(RouteName.checkoutRoute);
             }).paddingOnly(right: 20, left: 20));

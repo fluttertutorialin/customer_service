@@ -13,7 +13,7 @@ extension DynamicUtil on dynamic {
                 .merge(TextStyle(color: Get.theme.primaryColor))),
         snackPosition: SnackPosition.BOTTOM,
         margin: const EdgeInsets.all(20),
-        backgroundColor: Get.theme.accentColor,
+        backgroundColor: Get.theme.colorScheme.secondary,
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
         borderRadius: 8,
         dismissDirection: SnackDismissDirection.HORIZONTAL,
@@ -23,9 +23,7 @@ extension DynamicUtil on dynamic {
 
 extension ContextExtensions on BuildContext {}
 
-extension InputDecorationExtensions on InputDecoration {
-
-}
+extension InputDecorationExtensions on InputDecoration {}
 
 extension WidgetExtensions on Widget {
   getStarsList(double rate, {double size = 18}) {
@@ -34,12 +32,14 @@ extension WidgetExtensions on Widget {
       return Icon(Icons.star, size: size, color: const Color(0xFFFFB24D));
     });
     if (rate - rate.floor() > 0) {
-      list.add(Icon(Icons.star_half, size: size, color: const Color(0xFFFFB24D)));
+      list.add(
+          Icon(Icons.star_half, size: size, color: const Color(0xFFFFB24D)));
     }
     list.addAll(
         List.generate(5 - rate.floor() - (rate - rate.floor()).ceil(), (index) {
-          return Icon(Icons.star_border, size: size, color: const Color(0xFFFFB24D));
-        }));
+      return Icon(Icons.star_border,
+          size: size, color: const Color(0xFFFFB24D));
+    }));
     return list;
   }
 

@@ -33,7 +33,7 @@ class BookingPage extends StatelessWidget {
                         horizontal: 30, vertical: 12),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
-                    color: Get.theme.accentColor,
+                    color: Get.theme.colorScheme.secondary,
                     child: Text('accept'.tr,
                         style: Get.textTheme.bodyText2!
                             .merge(TextStyle(color: Get.theme.primaryColor))))),
@@ -72,7 +72,7 @@ class BookingPage extends StatelessWidget {
                         onPressed: () {},
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
-                        color: Get.theme.accentColor,
+                        color: Get.theme.colorScheme.secondary,
                         child: Wrap(
                             crossAxisAlignment: WrapCrossAlignment.center,
                             spacing: 5,
@@ -170,62 +170,65 @@ class BookingPage extends StatelessWidget {
   _buildBookingTitleBarWidget() {
     return BookingTitleBarWidget(
         title: Row(children: [
-          Flexible(
-              fit: FlexFit.tight,
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Text('Orboid Service', style: Get.textTheme.headline5),
-                    Row(children: [
-                      Icon(Icons.person_outline, size: 20, color: Get.theme.focusColor),
-                      const SizedBox(width: 8),
-                      Text('Hess Barker',
-                          style: Get.textTheme.bodyText1,
-                          maxLines: 1,
-                          overflow: TextOverflow.fade)
-                    ]),
-                    Row(children: [
-                      Icon(Icons.place_outlined, size: 20, color: Get.theme.focusColor),
-                      const SizedBox(width: 8),
-                      Expanded(
-                          child: Text('626 Meadow Street, Eagletowm, Michigan, 3705',
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: Get.textTheme.bodyText1))
-                    ])
-                  ])),
-          const SizedBox(width: 8),
-          Container(
-              width: 80,
-              child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Text('13:31',
-                    maxLines: 1,
-                    style: Get.textTheme.bodyText2!
-                        .merge(TextStyle(color: Get.theme.accentColor, height: 1.4)),
-                    softWrap: false,
-                    textAlign: TextAlign.center,
-                    overflow: TextOverflow.fade),
-                Text('05',
-                    maxLines: 1,
-                    style: Get.textTheme.headline3!
-                        .merge(TextStyle(color: Get.theme.accentColor, height: 1)),
-                    softWrap: false,
-                    textAlign: TextAlign.center,
-                    overflow: TextOverflow.fade),
-                Text('Nov',
-                    maxLines: 1,
-                    style: Get.textTheme.bodyText2!
-                        .merge(TextStyle(color: Get.theme.accentColor, height: 1)),
-                    softWrap: false,
-                    textAlign: TextAlign.center,
-                    overflow: TextOverflow.fade)
-              ]),
-              decoration: BoxDecoration(
-                  color: Get.theme.accentColor.withOpacity(0.2),
-                  borderRadius: const BorderRadius.all(Radius.circular(10))),
-              padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 6))
-        ]));
+      Flexible(
+          fit: FlexFit.tight,
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text('Orboid Service', style: Get.textTheme.headline5),
+                Row(children: [
+                  Icon(Icons.person_outline,
+                      size: 20, color: Get.theme.focusColor),
+                  const SizedBox(width: 8),
+                  Text('Hess Barker',
+                      style: Get.textTheme.bodyText1,
+                      maxLines: 1,
+                      overflow: TextOverflow.fade)
+                ]),
+                Row(children: [
+                  Icon(Icons.place_outlined,
+                      size: 20, color: Get.theme.focusColor),
+                  const SizedBox(width: 8),
+                  Expanded(
+                      child: Text(
+                          '626 Meadow Street, Eagletowm, Michigan, 3705',
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: Get.textTheme.bodyText1))
+                ])
+              ])),
+      const SizedBox(width: 8),
+      Container(
+          width: 80,
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            Text('13:31',
+                maxLines: 1,
+                style: Get.textTheme.bodyText2!.merge(TextStyle(
+                    color: Get.theme.colorScheme.secondary, height: 1.4)),
+                softWrap: false,
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.fade),
+            Text('05',
+                maxLines: 1,
+                style: Get.textTheme.headline3!.merge(TextStyle(
+                    color: Get.theme.colorScheme.secondary, height: 1)),
+                softWrap: false,
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.fade),
+            Text('Nov',
+                maxLines: 1,
+                style: Get.textTheme.bodyText2!.merge(TextStyle(
+                    color: Get.theme.colorScheme.secondary, height: 1)),
+                softWrap: false,
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.fade)
+          ]),
+          decoration: BoxDecoration(
+              color: Get.theme.colorScheme.secondary.withOpacity(0.2),
+              borderRadius: const BorderRadius.all(Radius.circular(10))),
+          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 6))
+    ]));
   }
 
   _buildContactCustomer() {
@@ -235,8 +238,9 @@ class BookingPage extends StatelessWidget {
         decoration: getBoxDecoration(),
         child: Row(children: [
           Expanded(
-              child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
                 Text('contactCustomer'.tr, style: Get.textTheme.subtitle2),
                 Text('+1 (980) 438-2388', style: Get.textTheme.caption)
               ])),
@@ -251,23 +255,21 @@ class BookingPage extends StatelessWidget {
                 padding: EdgeInsets.zero,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)),
-                color: Get.theme.accentColor.withOpacity(0.2),
+                color: Get.theme.colorScheme.secondary.withOpacity(0.2),
                 child: Icon(Icons.phone_android_outlined,
-                    color: Get.theme.accentColor)),
+                    color: Get.theme.colorScheme.secondary)),
             MaterialButton(
                 elevation: 0,
                 onPressed: () {},
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)),
-                color: Get.theme.accentColor.withOpacity(0.2),
+                color: Get.theme.colorScheme.secondary.withOpacity(0.2),
                 padding: EdgeInsets.zero,
                 height: 44,
                 minWidth: 44,
-                child: Icon(Icons.chat_outlined, color: Get.theme.accentColor))
+                child: Icon(Icons.chat_outlined,
+                    color: Get.theme.colorScheme.secondary))
           ])
         ]));
   }
 }
-
-
-

@@ -7,7 +7,8 @@ import '../../util/extensions.dart';
 class CategoryListItemWidget extends StatelessWidget {
   final bool? expanded;
 
-  const CategoryListItemWidget({Key? key, this.expanded = false}) : super(key: key);
+  const CategoryListItemWidget({Key? key, this.expanded = false})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +33,10 @@ class CategoryListItemWidget extends StatelessWidget {
                 expandedCrossAxisAlignment: CrossAxisAlignment.stretch,
                 title: InkWell(
                     highlightColor: Colors.transparent,
-                    splashColor:
-                        Theme.of(context).accentColor.withOpacity(0.08),
+                    splashColor: Theme.of(context)
+                        .colorScheme
+                        .secondary
+                        .withOpacity(0.08),
                     onTap: () {},
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,

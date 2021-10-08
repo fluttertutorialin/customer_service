@@ -17,7 +17,7 @@ class AccountPage extends StatelessWidget {
                 style: Get.textTheme.headline6!.merge(TextStyle(
                     color: context.theme.primaryColor, fontSize: 18))),
             centerTitle: true,
-            backgroundColor: Get.theme.accentColor,
+            backgroundColor: Get.theme.colorScheme.secondary,
             automaticallyImplyLeading: false,
             leading: IconButton(
                 icon: Icon(Icons.sort, color: context.theme.hintColor),
@@ -29,7 +29,7 @@ class AccountPage extends StatelessWidget {
                 height: 170,
                 width: Get.width,
                 decoration: BoxDecoration(
-                    color: Get.theme.accentColor,
+                    color: Get.theme.colorScheme.secondary,
                     borderRadius: const BorderRadius.vertical(
                         bottom: Radius.circular(10)),
                     boxShadow: [
@@ -75,28 +75,28 @@ class AccountPage extends StatelessWidget {
               child: Column(children: [
                 AccountLinkWidget(
                     icon: Icon(Icons.person_outline,
-                        color: Get.theme.accentColor),
+                        color: Get.theme.colorScheme.secondary),
                     text: Text('profile'.tr),
                     onTap: (e) {
                       Get.toNamed(RouteName.profileRoute);
                     }),
                 AccountLinkWidget(
                     icon: Icon(Icons.assignment_outlined,
-                        color: Get.theme.accentColor),
+                        color: Get.theme.colorScheme.secondary),
                     text: Text('booking'.tr),
                     onTap: (e) {
                       Get.find<MainTabController>().changeTabIndex(0);
                     }),
                 AccountLinkWidget(
                     icon: Icon(Icons.notifications_outlined,
-                        color: Get.theme.accentColor),
+                        color: Get.theme.colorScheme.secondary),
                     text: Text('notification'.tr),
                     onTap: (e) {
                       Get.toNamed(RouteName.notificationRoute);
                     }),
                 AccountLinkWidget(
-                    icon:
-                        Icon(Icons.chat_outlined, color: Get.theme.accentColor),
+                    icon: Icon(Icons.chat_outlined,
+                        color: Get.theme.colorScheme.secondary),
                     text: Text('message'.tr),
                     onTap: (e) {
                       Get.find<MainTabController>().changeTabIndex(2);
@@ -109,14 +109,14 @@ class AccountPage extends StatelessWidget {
               child: Column(children: [
                 AccountLinkWidget(
                     icon: Icon(Icons.translate_outlined,
-                        color: Get.theme.accentColor),
+                        color: Get.theme.colorScheme.secondary),
                     text: Text('language'.tr),
                     onTap: (e) {
                       Get.toNamed(RouteName.languageRoute);
                     }),
                 AccountLinkWidget(
                     icon: Icon(Icons.brightness_6_outlined,
-                        color: Get.theme.accentColor),
+                        color: Get.theme.colorScheme.secondary),
                     text: Text('themeMode'.tr),
                     onTap: (e) {
                       Get.toNamed(RouteName.themeModeRoute);
@@ -129,13 +129,14 @@ class AccountPage extends StatelessWidget {
               child: Column(children: [
                 AccountLinkWidget(
                     icon: Icon(Icons.support_outlined,
-                        color: Get.theme.accentColor),
+                        color: Get.theme.colorScheme.secondary),
                     text: Text('helpAndFaQ'.tr),
                     onTap: (e) {
                       Get.toNamed(RouteName.helpFaqRoute);
                     }),
                 AccountLinkWidget(
-                    icon: Icon(Icons.logout, color: Get.theme.accentColor),
+                    icon: Icon(Icons.logout,
+                        color: Get.theme.colorScheme.secondary),
                     text: Text('logout'.tr),
                     onTap: (e) {
                       Get.offNamed(RouteName.loginRoute);
