@@ -9,8 +9,9 @@ class ThemeModePage extends GetView<ThemeModeController> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text('themeMode'.tr, style: context.textTheme.headline6!
-                .merge(const TextStyle(fontSize: 18))),
+            title: Text('themeMode'.tr,
+                style: context.textTheme.headline6!
+                    .merge(const TextStyle(fontSize: 18))),
             centerTitle: true,
             backgroundColor: Colors.transparent,
             automaticallyImplyLeading: false,

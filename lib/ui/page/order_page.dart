@@ -13,15 +13,17 @@ class OrderPage extends GetView<OrderController> {
         length: 3,
         child: Scaffold(
             appBar: AppBar(
-                title: Text('Bookings'.tr,
+                title: Text('myBookings'.tr,
                     style: Get.textTheme.headline6!
                         .merge(const TextStyle(fontSize: 18))),
                 centerTitle: true,
                 backgroundColor: Colors.transparent,
                 elevation: 0,
                 automaticallyImplyLeading: false,
+                iconTheme:
+                IconThemeData(color: context.theme.hintColor),
                 leading: IconButton(
-                    icon: Icon(Icons.sort, color: context.theme.hintColor),
+                    icon: const Icon(Icons.sort),
                     onPressed: () => {Scaffold.of(context).openDrawer()}),
                 bottom: TabBar(
                     indicatorSize: TabBarIndicatorSize.label,

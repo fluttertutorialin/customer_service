@@ -15,44 +15,36 @@ Future<bool?> showAlertDialog(
 }) {
   if (!Platform.isIOS) {
     return showDialog<bool>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(title),
-        content: Text(content),
-        actions: <Widget>[
-          if (cancelAcitionText != null)
-            ElevatedButton(
-              onPressed: () => Navigator.of(context).pop(false),
-              child: Text(cancelAcitionText),
-            ),
-          ElevatedButton(
-            onPressed: () => Navigator.of(context).pop(true),
-            child: Text(defaultActionText),
-          )
-        ],
-      ),
-    );
+        context: context,
+        builder: (context) => AlertDialog(
+                title: Text(title),
+                content: Text(content),
+                actions: <Widget>[
+                  if (cancelAcitionText != null)
+                    ElevatedButton(
+                        onPressed: () => Navigator.of(context).pop(false),
+                        child: Text(cancelAcitionText)),
+                  ElevatedButton(
+                      onPressed: () => Navigator.of(context).pop(true),
+                      child: Text(defaultActionText))
+                ]));
   }
   return showCupertinoDialog(
-    context: context,
-    builder: (context) => CupertinoAlertDialog(
-      title: Text(title),
-      content: Text(content),
-      actions: <Widget>[
-        if (cancelAcitionText != null)
-          CupertinoDialogAction(
-            onPressed: () => Navigator.of(context).pop(false),
-            isDefaultAction: isCancelDefault,
-            isDestructiveAction: !isCancelDefault,
-            child: Text(cancelAcitionText),
-          ),
-        CupertinoDialogAction(
-          onPressed: () => Navigator.of(context).pop(true),
-          isDefaultAction: isDefaultDefault,
-          isDestructiveAction: !isDefaultDefault,
-          child: Text(defaultActionText),
-        ),
-      ],
-    ),
-  );
+      context: context,
+      builder: (context) => CupertinoAlertDialog(
+              title: Text(title),
+              content: Text(content),
+              actions: <Widget>[
+                if (cancelAcitionText != null)
+                  CupertinoDialogAction(
+                      onPressed: () => Navigator.of(context).pop(false),
+                      isDefaultAction: isCancelDefault,
+                      isDestructiveAction: !isCancelDefault,
+                      child: Text(cancelAcitionText)),
+                CupertinoDialogAction(
+                    onPressed: () => Navigator.of(context).pop(true),
+                    isDefaultAction: isDefaultDefault,
+                    isDestructiveAction: !isDefaultDefault,
+                    child: Text(defaultActionText))
+              ]));
 }

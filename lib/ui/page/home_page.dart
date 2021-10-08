@@ -26,7 +26,7 @@ class HomePage extends GetView<HomeController> {
                   elevation: 0.0,
                   pinned: true,
                   iconTheme:
-                      IconThemeData(color: Theme.of(context).primaryColor),
+                      IconThemeData(color: context.theme.hintColor),
                   title: Text(
                       Get.find<SettingsService>().setting.value.appName!,
                       style: Get.textTheme.headline6!.merge(const TextStyle(
@@ -34,7 +34,7 @@ class HomePage extends GetView<HomeController> {
                   centerTitle: true,
                   automaticallyImplyLeading: false,
                   leading: IconButton(
-                      icon: Icon(Icons.sort, color: Get.theme.hintColor),
+                      icon: const Icon(Icons.sort),
                       onPressed: () => {Scaffold.of(context).openDrawer()}),
                   bottom: SearchBarWidget(),
                   flexibleSpace: FlexibleSpaceBar(

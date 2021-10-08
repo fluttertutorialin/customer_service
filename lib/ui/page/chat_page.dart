@@ -25,8 +25,10 @@ class ChatPage extends StatelessWidget {
             backgroundColor: Colors.transparent,
             elevation: 0,
             automaticallyImplyLeading: false,
+            iconTheme:
+            IconThemeData(color: context.theme.hintColor),
             leading: IconButton(
-                icon: Icon(Icons.sort, color: context.theme.hintColor),
+                icon: const Icon(Icons.sort),
                 onPressed: () => {Scaffold.of(context).openDrawer()})),
         body: _conversationsList());
   }

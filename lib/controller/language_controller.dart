@@ -24,10 +24,7 @@ class LanguageController extends GetxController {
       // en
       Get.updateLocale(Locale(value));
     }
-    await _box.write('language', value);
-    if (Get.isDarkMode) {
-      Get.find<ThemeModeController>().changeThemeMode(ThemeMode.light);
-    }
+    await _box.writeIfNull('language', value);
     Get.rootController.setTheme(Get.find<SettingsService>().getLightTheme());
   }
 }
