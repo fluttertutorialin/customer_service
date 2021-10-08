@@ -92,6 +92,7 @@ class _NotificationNewState extends State<NotificationNewPage>
                 child: Container(
                     color: Get.theme.primaryColor,
                     child: TabBar(
+                        indicatorColor: context.theme.colorScheme.secondary,
                         labelColor: Get.theme.hintColor,
                         tabs: _tabs.map((e) => Tab(text: e)).toList()))),
             flexibleSpace: _buildFlexibleSpaceBarWidget()),
@@ -192,7 +193,7 @@ class _NotificationNewState extends State<NotificationNewPage>
                 const SizedBox(height: 24),
                 MaxWidthRaisedButton(
                     width: double.infinity,
-                    color: Get.theme.colorScheme.secondary,
+                    color: Get.theme.colorScheme.primary,
                     icon: Icon(Icons.add_rounded,
                         color: Get.theme.primaryColor, size: 20),
                     buttonText: 'ADD NOTIFICATION',

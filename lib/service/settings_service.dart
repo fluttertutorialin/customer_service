@@ -34,6 +34,7 @@ class SettingsService extends GetxService {
         colorScheme: ColorScheme.light(
             primary: _parseColor(setting.value.mainColor),
             secondary: _parseColor(setting.value.mainColor)),
+        unselectedWidgetColor: _parseColor(setting.value.mainDarkColor),
         textTheme: GoogleFonts.getTextTheme(
             _getLocale().toString().startsWith('ar') ? 'Cairo' : 'Poppins',
             TextTheme(
@@ -112,6 +113,7 @@ class SettingsService extends GetxService {
         colorScheme: ColorScheme.dark(
             primary: _parseColor(setting.value.mainDarkColor),
             secondary: _parseColor(setting.value.mainDarkColor)),
+        unselectedWidgetColor: _parseColor(setting.value.mainDarkColor),
         textTheme: GoogleFonts.getTextTheme(
             _getLocale().toString().startsWith('ar') ? 'Cairo' : 'Poppins',
             TextTheme(

@@ -21,6 +21,7 @@ class ThemeModePage extends GetView<ThemeModeController> {
             elevation: 0),
         body: Column(children: [
           Obx(() => RadioListTile(
+              activeColor: context.theme.colorScheme.secondary,
               value: ThemeMode.light,
               groupValue: controller.selectedThemeMode.value,
               onChanged: (ThemeMode? value) {
@@ -28,6 +29,7 @@ class ThemeModePage extends GetView<ThemeModeController> {
               },
               title: Text('lightTheme'.tr, style: Get.textTheme.bodyText2))),
           Obx(() => RadioListTile(
+              activeColor: context.theme.colorScheme.secondary,
               value: ThemeMode.dark,
               groupValue: controller.selectedThemeMode.value,
               onChanged: (ThemeMode? value) {
@@ -35,6 +37,7 @@ class ThemeModePage extends GetView<ThemeModeController> {
               },
               title: Text('darkTheme'.tr, style: Get.textTheme.bodyText2))),
           Obx(() => RadioListTile(
+              activeColor: context.theme.colorScheme.secondary,
               value: ThemeMode.system,
               groupValue: controller.selectedThemeMode.value,
               onChanged: (ThemeMode? value) {

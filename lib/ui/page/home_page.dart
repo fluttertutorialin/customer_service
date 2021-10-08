@@ -34,7 +34,7 @@ class HomePage extends GetView<HomeController> {
                   leading: IconButton(
                       icon: Icon(Icons.sort, color: Get.theme.hintColor),
                       onPressed: () => {Scaffold.of(context).openDrawer()}),
-                  bottom: const SearchBarWidget(),
+                  bottom: SearchBarWidget(),
                   flexibleSpace: FlexibleSpaceBar(
                       collapseMode: CollapseMode.parallax,
                       background: Stack(
@@ -93,7 +93,7 @@ class HomePage extends GetView<HomeController> {
                           child: Text('viewAll'.tr,
                               style: Get.textTheme.subtitle1))
                     ])),
-                const RecommendedCarouselWidget(),
+                RecommendedCarouselWidget()
               ])),
             ])));
   }
