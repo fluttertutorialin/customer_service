@@ -20,7 +20,7 @@ class AccountPage extends StatelessWidget {
             backgroundColor: Get.theme.accentColor,
             automaticallyImplyLeading: false,
             leading: IconButton(
-                icon: Icon(Icons.sort, color: Get.theme.primaryColor),
+                icon: Icon(Icons.sort, color: context.theme.hintColor),
                 onPressed: () => {Scaffold.of(context).openDrawer()}),
             elevation: 0),
         body: ListView(primary: true, children: [

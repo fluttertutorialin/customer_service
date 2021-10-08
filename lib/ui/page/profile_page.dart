@@ -16,11 +16,9 @@ class ProfilePage extends StatelessWidget {
                 fontSize: 18))),
             centerTitle: true,
             backgroundColor: Colors.transparent,
-            iconTheme:
-            IconThemeData(color: context.theme.hintColor),
             automaticallyImplyLeading: false,
             leading: IconButton(
-                icon: const Icon(Icons.arrow_back_ios),
+                icon: Icon(Icons.arrow_back_ios, color: Get.theme.hintColor),
                 onPressed: () => Get.back()),
             elevation: 0),
         bottomNavigationBar: Container(

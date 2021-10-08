@@ -20,10 +20,8 @@ class OrderPage extends GetView<OrderController> {
                 backgroundColor: Colors.transparent,
                 elevation: 0,
                 automaticallyImplyLeading: false,
-                iconTheme:
-                IconThemeData(color: context.theme.hintColor),
                 leading: IconButton(
-                    icon: const Icon(Icons.sort),
+                    icon: Icon(Icons.sort, color: context.theme.hintColor),
                     onPressed: () => {Scaffold.of(context).openDrawer()}),
                 bottom: TabBar(
                     indicatorSize: TabBarIndicatorSize.label,
