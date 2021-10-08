@@ -12,7 +12,7 @@ class LocationWidget extends StatelessWidget {
           const Icon(Icons.place_outlined),
           const SizedBox(width: 10),
           Expanded(child: Text('29 street of NY, New York City, USA',
-                style: Get.textTheme.bodyText1)),
+                style: context.textTheme.bodyText1)),
           const SizedBox(width: 10),
           IconButton(icon: const Icon(Icons.gps_fixed), onPressed: () async {})
         ]));

@@ -22,8 +22,9 @@ class BookServicePage extends GetView<BookServiceController> {
                 icon: Icon(Icons.arrow_back_ios, color: Get.theme.hintColor),
                 onPressed: () => Get.back()),
             elevation: 0),
-        bottomNavigationBar: buildBlockButtonWidget(),
-        body: ListView(children: [
+        bottomNavigationBar: _buildBlockButtonWidget(),
+        body: SingleChildScrollView(
+            child: Column(children: [
           Container(
               margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 25),
@@ -135,10 +136,10 @@ class BookServicePage extends GetView<BookServiceController> {
                   Text('At 11:23', style: Get.textTheme.headline3)
                 ]));
           })
-        ]));
+        ])));
   }
 
-  Widget buildBlockButtonWidget() {
+  _buildBlockButtonWidget() {
     return Container(
         padding: const EdgeInsets.symmetric(vertical: 20),
         decoration: BoxDecoration(

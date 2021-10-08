@@ -36,7 +36,7 @@ class SettingsService extends GetxService {
             primary: _parseColor(setting.value.mainColor),
             secondary: _parseColor(setting.value.mainColor)),
         textTheme: GoogleFonts.getTextTheme(
-            getLocale().toString().startsWith('ar') ? 'Cairo' : 'Poppins',
+            _getLocale().toString().startsWith('ar') ? 'Cairo' : 'Poppins',
             TextTheme(
                 headline6: TextStyle(
                     fontSize: 15.0,
@@ -114,7 +114,7 @@ class SettingsService extends GetxService {
             primary: _parseColor(setting.value.mainDarkColor),
             secondary: _parseColor(setting.value.mainDarkColor)),
         textTheme: GoogleFonts.getTextTheme(
-            getLocale().toString().startsWith('ar') ? 'Cairo' : 'Poppins',
+            _getLocale().toString().startsWith('ar') ? 'Cairo' : 'Poppins',
             TextTheme(
                 headline6: TextStyle(
                     fontSize: 15.0,
@@ -173,7 +173,7 @@ class SettingsService extends GetxService {
                     height: 1.2))));
   }
 
-  Locale getLocale() {
+  Locale _getLocale() {
     String? _locale = GetStorage().read<String>('language');
     if (_locale == null || _locale.isEmpty) {
       _locale = setting.value.mobileLanguage;
@@ -184,17 +184,15 @@ class SettingsService extends GetxService {
 
   ThemeMode getThemeMode() {
     String? _themeMode = GetStorage().read<String>('theme_mode');
+
     switch (_themeMode) {
       case 'ThemeMode.light':
-        SystemChrome.setSystemUIOverlayStyle(
-          SystemUiOverlayStyle.light
-              .copyWith(systemNavigationBarColor: Colors.white),
+        SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(systemNavigationBarColor: Colors.white),
         );
         return ThemeMode.light;
       case 'ThemeMode.dark':
         SystemChrome.setSystemUIOverlayStyle(
-          SystemUiOverlayStyle.dark
-              .copyWith(systemNavigationBarColor: Colors.black87),
+          SystemUiOverlayStyle.dark.copyWith(systemNavigationBarColor: Colors.black87),
         );
         return ThemeMode.dark;
       case 'ThemeMode.system':
@@ -202,14 +200,12 @@ class SettingsService extends GetxService {
       default:
         if (setting.value.defaultTheme == 'dark') {
           SystemChrome.setSystemUIOverlayStyle(
-            SystemUiOverlayStyle.dark
-                .copyWith(systemNavigationBarColor: Colors.black87),
+            SystemUiOverlayStyle.dark.copyWith(systemNavigationBarColor: Colors.black87),
           );
           return ThemeMode.dark;
         } else {
           SystemChrome.setSystemUIOverlayStyle(
-            SystemUiOverlayStyle.light
-                .copyWith(systemNavigationBarColor: Colors.white),
+            SystemUiOverlayStyle.light.copyWith(systemNavigationBarColor: Colors.white),
           );
           return ThemeMode.light;
         }
