@@ -15,9 +15,7 @@ class _CircularProgressState extends State<CircularProgress>
   void initState() {
     super.initState();
     _progressController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 500),
-    )
+        vsync: this, duration: const Duration(milliseconds: 500))
       ..forward()
       ..repeat();
   }
