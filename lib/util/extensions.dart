@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../service/settings_service.dart';
 
+/// Use across of the application
 extension DynamicUtil on dynamic {
   toast({String title = 'Success', String? message}) {
     return GetBar(
