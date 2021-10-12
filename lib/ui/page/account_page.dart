@@ -42,14 +42,14 @@ class AccountPage extends StatelessWidget {
                 child: Padding(
                     padding: const EdgeInsets.all(20),
                     child: Column(children: [
-                      Text('name'.tr,
+                      Text('Lakhani Kamlesh',
                           style: Get.textTheme.headline6!
                               .merge(TextStyle(color: Get.theme.primaryColor))),
-                      Text('freelancer'.tr,
+                      Text('Freelancer',
                           style: Get.textTheme.caption!
                               .merge(TextStyle(color: Get.theme.primaryColor))),
                       const SizedBox(height: 10),
-                      Text('email'.tr,
+                      Text('kamal.lakhani56@gmail.com',
                           style: Get.textTheme.caption!
                               .merge(TextStyle(color: Get.theme.primaryColor)))
                     ]))),
