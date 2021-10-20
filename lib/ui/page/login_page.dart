@@ -63,7 +63,7 @@ class LoginPage extends GetView<LoginController> {
         onPressed: () {
           Get.offNamed(RouteName.mainTabRoute);
         },
-        color: Get.theme.accentColor,
+        color: Get.theme.colorScheme.secondary,
         text: Text('login'.tr,
             style: Get.textTheme.headline6!
                 .merge(TextStyle(color: Get.theme.primaryColor))),

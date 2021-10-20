@@ -1,3 +1,5 @@
+/// All avaible routes in the application
+///
 abstract class RouteName {
   static const loginRoute = '/login';
   static const signUpRoute = '/signUp';
@@ -25,6 +27,4 @@ abstract class RouteName {
   static const confirmationRoute = '/confirmation';
 
   static const chatTypeViewRoute = '/chatTypeView';
-
-
 }

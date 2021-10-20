@@ -39,8 +39,10 @@ class MyServicePage extends GetView<MyServiceController> {
                         decoration: BoxDecoration(
                             gradient: LinearGradient(
                                 colors: [
-                                  Get.theme.accentColor.withOpacity(1),
-                                  Get.theme.accentColor.withOpacity(0.2)
+                                  Get.theme.colorScheme.secondary
+                                      .withOpacity(1),
+                                  Get.theme.colorScheme.secondary
+                                      .withOpacity(0.2)
                                 ],
                                 begin: AlignmentDirectional.topStart,
                                 //const FractionalOffset(1, 0),
@@ -78,7 +80,8 @@ class MyServicePage extends GetView<MyServiceController> {
                                         horizontal: 12, vertical: 15),
                                     backgroundColor:
                                         Get.theme.focusColor.withOpacity(0.1),
-                                    selectedColor: Get.theme.accentColor,
+                                    selectedColor:
+                                        Get.theme.colorScheme.secondary,
                                     selected: controller.isSelected(_filter),
                                     shape: RoundedRectangleBorder(
                                         borderRadius:

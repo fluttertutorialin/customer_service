@@ -12,7 +12,7 @@ class ChatPage extends StatelessWidget {
       },
       shrinkWrap: true,
       primary: false,
-      itemBuilder: (context, index) => ChatsWidget());
+      itemBuilder: (context, index) => const ChatsWidget());
 
   @override
   Widget build(BuildContext context) {

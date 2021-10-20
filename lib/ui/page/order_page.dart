@@ -26,12 +26,12 @@ class OrderPage extends GetView<OrderController> {
                 bottom: TabBar(
                     indicatorSize: TabBarIndicatorSize.label,
                     labelPadding: const EdgeInsets.symmetric(horizontal: 15),
-                    unselectedLabelColor: context.theme.accentColor,
+                    unselectedLabelColor: context.theme.colorScheme.secondary,
                     labelColor: context.theme.primaryColor,
                     labelStyle: context.textTheme.bodyText1,
                     indicator: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: context.theme.accentColor),
+                        color: context.theme.colorScheme.secondary),
                     tabs: [
                       Tab(
                           child: Container(
@@ -39,7 +39,7 @@ class OrderPage extends GetView<OrderController> {
                                   const EdgeInsets.symmetric(horizontal: 5),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
-                                  color: context.theme.accentColor
+                                  color: context.theme.colorScheme.secondary
                                       .withOpacity(0.2)),
                               child: Align(
                                   alignment: Alignment.center,
@@ -53,7 +53,7 @@ class OrderPage extends GetView<OrderController> {
                                   const EdgeInsets.symmetric(horizontal: 5),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
-                                  color: context.theme.accentColor
+                                  color: context.theme.colorScheme.secondary
                                       .withOpacity(0.2)),
                               child: Align(
                                   alignment: Alignment.center,
@@ -67,7 +67,7 @@ class OrderPage extends GetView<OrderController> {
                                   const EdgeInsets.symmetric(horizontal: 5),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
-                                  color: context.theme.accentColor
+                                  color: context.theme.colorScheme.secondary
                                       .withOpacity(0.2)),
                               child: Align(
                                   alignment: Alignment.center,

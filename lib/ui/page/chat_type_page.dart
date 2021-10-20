@@ -62,7 +62,8 @@ class ChatTypeView extends StatelessWidget {
                           padding: const EdgeInsets.only(right: 30),
                           onPressed: () {},
                           icon: Icon(Icons.send_outlined,
-                              color: Get.theme.accentColor, size: 30)),
+                              color: Get.theme.colorScheme.secondary,
+                              size: 30)),
                       border: const UnderlineInputBorder(
                           borderSide: BorderSide.none),
                       enabledBorder: const UnderlineInputBorder(
@@ -121,7 +122,7 @@ class ChatTypeView extends StatelessWidget {
         alignment: Alignment.centerLeft,
         child: Container(
             decoration: BoxDecoration(
-                color: Get.theme.accentColor,
+                color: Get.theme.colorScheme.secondary,
                 borderRadius: const BorderRadius.only(
                     topRight: Radius.circular(15),
                     bottomLeft: Radius.circular(15),
@@ -138,7 +139,8 @@ class ChatTypeView extends StatelessWidget {
                       width: 42,
                       height: 42,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.all(const Radius.circular(42)),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(42)),
                           child: CachedNetworkImage(
                             width: double.infinity,
                             fit: BoxFit.cover,

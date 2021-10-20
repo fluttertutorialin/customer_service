@@ -15,14 +15,10 @@ class BookingOptionsPopupMenuWidget extends StatelessWidget {
         onSelected: (item) {
           switch (item) {
             case 'accept':
-              {
-                // TODO accept the booking
-              }
+              {}
               break;
             case 'decline':
-              {
-                // TODO decline the booking
-              }
+              {}
               break;
             case 'view':
               {}

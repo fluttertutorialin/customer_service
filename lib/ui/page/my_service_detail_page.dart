@@ -82,8 +82,10 @@ class MyServiceDetailPage extends StatelessWidget {
                                                   AlignmentDirectional.topStart,
                                               children: [
                                                 ClipRRect(
-                                                    borderRadius: const BorderRadius.all(
-                                                        Radius.circular(10)),
+                                                    borderRadius:
+                                                        const BorderRadius.all(
+                                                            Radius.circular(
+                                                                10)),
                                                     child: CachedNetworkImage(
                                                         height: 100,
                                                         width: double.infinity,
@@ -164,22 +166,20 @@ class MyServiceDetailPage extends StatelessWidget {
                   offset: const Offset(0, -5)),
             ]),
         child: BlockButtonWidget(
-                text:
-                    Stack(alignment: AlignmentDirectional.centerEnd, children: [
-                  SizedBox(
-                      width: double.infinity,
-                      child: Text('bookThisService'.tr,
-                          textAlign: TextAlign.center,
-                          style: Get.textTheme.headline6!.merge(
-                              TextStyle(color: Get.theme.primaryColor)))),
-                  Icon(Icons.arrow_forward_ios,
-                      color: Get.theme.primaryColor, size: 20)
-                ]),
-                color: Get.theme.accentColor,
-                onPressed: () {
-                  Get.toNamed(RouteName.bookServiceRoute);
-                })
-            .paddingOnly(right: 20, left: 20));
+            text: Stack(alignment: AlignmentDirectional.centerEnd, children: [
+              SizedBox(
+                  width: double.infinity,
+                  child: Text('bookThisService'.tr,
+                      textAlign: TextAlign.center,
+                      style: Get.textTheme.headline6!
+                          .merge(TextStyle(color: Get.theme.primaryColor)))),
+              Icon(Icons.arrow_forward_ios,
+                  color: Get.theme.primaryColor, size: 20)
+            ]),
+            color: Get.theme.colorScheme.secondary,
+            onPressed: () {
+              Get.toNamed(RouteName.bookServiceRoute);
+            }).paddingOnly(right: 20, left: 20));
   }
 
   _buildEServiceTitleBarWidget() {
@@ -206,7 +206,7 @@ class MyServiceDetailPage extends StatelessWidget {
             getPrice(
               100.00,
               style: Get.textTheme.headline3!
-                  .merge(TextStyle(color: Get.theme.accentColor)),
+                  .merge(TextStyle(color: Get.theme.colorScheme.secondary)),
             )
           ])
         ]));

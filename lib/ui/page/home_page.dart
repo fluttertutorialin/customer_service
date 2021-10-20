@@ -27,8 +27,8 @@ class HomePage extends GetView<HomeController> {
                   pinned: true,
                   title: Text(
                       Get.find<SettingsService>().setting.value.appName!,
-                      style: Get.textTheme.headline6!.merge(const TextStyle(
-                          fontSize: 18))),
+                      style: Get.textTheme.headline6!
+                          .merge(const TextStyle(fontSize: 18))),
                   centerTitle: true,
                   automaticallyImplyLeading: false,
                   leading: IconButton(
@@ -71,7 +71,8 @@ class HomePage extends GetView<HomeController> {
                           elevation: 0,
                           onPressed: () {},
                           shape: const StadiumBorder(),
-                          color: Get.theme.accentColor.withOpacity(0.1),
+                          color:
+                              Get.theme.colorScheme.secondary.withOpacity(0.1),
                           child: Text('viewAll'.tr,
                               style: Get.textTheme.subtitle1))
                     ])),
@@ -87,11 +88,12 @@ class HomePage extends GetView<HomeController> {
                           elevation: 0,
                           onPressed: () {},
                           shape: const StadiumBorder(),
-                          color: Get.theme.accentColor.withOpacity(0.1),
+                          color:
+                              Get.theme.colorScheme.secondary.withOpacity(0.1),
                           child: Text('viewAll'.tr,
                               style: Get.textTheme.subtitle1))
                     ])),
-                 RecommendedCarouselWidget(),
+                RecommendedCarouselWidget()
               ])),
             ])));
   }

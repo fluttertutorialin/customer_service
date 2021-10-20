@@ -68,7 +68,7 @@ class FilterBottomSheetWidget extends StatelessWidget {
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
-                    color: Get.theme.accentColor.withOpacity(0.15),
+                    color: Get.theme.colorScheme.secondary.withOpacity(0.15),
                     child: Text('Apply'.tr, style: Get.textTheme.subtitle1))
               ])),
           Container(

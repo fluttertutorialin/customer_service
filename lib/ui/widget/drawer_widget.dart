@@ -24,8 +24,8 @@ class DrawerWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text('Welcome'.tr,
-                        style: Get.textTheme.headline5!
-                            .merge(TextStyle(color: Get.theme.accentColor))),
+                        style: Get.textTheme.headline5!.merge(
+                            TextStyle(color: Get.theme.colorScheme.secondary))),
                     const SizedBox(height: 5),
                     Text('loginCreateNewAccountFree'.tr,
                         style: Get.textTheme.bodyText1),
@@ -36,7 +36,7 @@ class DrawerWidget extends StatelessWidget {
                           onPressed: () {
                             Get.offAndToNamed(RouteName.loginRoute);
                           },
-                          color: Get.theme.accentColor,
+                          color: Get.theme.colorScheme.secondary,
                           height: 40,
                           child: Wrap(
                               runAlignment: WrapAlignment.center,

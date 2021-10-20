@@ -19,43 +19,23 @@ class CheckoutController extends GetxController {
 
   Future loadPaymentMethodsList() async {
     paymentsList = [
-      PaymentMethodResponse(
-          'visa_card',
-          'visaCard',
-          'clickPayWithVisaCard',
-          '/Checkout',
-          'assets/img/visacard.png',
+      PaymentMethodResponse('visa_card', 'visaCard', 'clickPayWithVisaCard',
+          '/Checkout', 'assets/img/visacard.png',
           isDefault: true),
-      PaymentMethodResponse(
-          'mastercard',
-          'masterCard',
-          'clickPayWithMastercard',
-          '/Checkout',
-          'assets/img/mastercard.png'),
-      PaymentMethodResponse(
-          'razorpay',
-          'razorpay',
-          'clickPayRazorpay',
-          '/RazorPay',
-          'assets/img/razorpay.png'),
-      PaymentMethodResponse(
-          'paypal',
-          'paypal',
-          'clickPayPayPal',
-          '/PayPal',
+      PaymentMethodResponse('mastercard', 'masterCard',
+          'clickPayWithMastercard', '/Checkout', 'assets/img/mastercard.png'),
+      PaymentMethodResponse('razorpay', 'razorpay', 'clickPayRazorpay',
+          '/RazorPay', 'assets/img/razorpay.png'),
+      PaymentMethodResponse('paypal', 'paypal', 'clickPayPayPal', '/PayPal',
           'assets/img/paypal.png'),
     ];
     cashList = [
-      PaymentMethodResponse('cod', 'cash', 'clickPayCash', '/Cash',
-          'assets/img/cash.png'),
+      PaymentMethodResponse(
+          'cod', 'cash', 'clickPayCash', '/Cash', 'assets/img/cash.png'),
     ];
     walletList = [
       PaymentMethodResponse(
-          'wallet',
-          'wallet',
-          'payWallet',
-          '/Wallet',
-          'assets/img/wallet.png'),
+          'wallet', 'wallet', 'payWallet', '/Wallet', 'assets/img/wallet.png'),
     ];
   }
 
@@ -81,7 +61,7 @@ class CheckoutController extends GetxController {
 
   Color? getColor(PaymentMethodResponse paymentMethod) {
     if (paymentMethod == selectedPaymentMethod.value) {
-      return Get.theme.accentColor;
+      return Get.theme.colorScheme.secondary;
     }
     return null;
   }

@@ -32,7 +32,8 @@ class MyServiceListItemWidget extends StatelessWidget {
                             height: 80,
                             width: 80,
                             fit: BoxFit.cover,
-                            imageUrl:  'http://lorempixel.com/400/400/business/4/',
+                            imageUrl:
+                                'http://lorempixel.com/400/400/business/4/',
                             errorWidget: (context, url, error) =>
                                 const Icon(Icons.error_outline)))),
                 /*Container(
@@ -98,17 +99,21 @@ class MyServiceListItemWidget extends StatelessWidget {
                                                 MainAxisAlignment.center,
                                             children: <Widget>[
                                               Icon(Icons.star,
-                                                  color: Get.theme.accentColor,
+                                                  color: Get.theme.colorScheme
+                                                      .secondary,
                                                   size: 18),
                                               Text('3.45',
                                                   style: Get
                                                       .textTheme.bodyText2!
                                                       .merge(TextStyle(
-                                                          color: Get.theme
-                                                              .accentColor,
+                                                          color: Get
+                                                              .theme
+                                                              .colorScheme
+                                                              .secondary,
                                                           height: 1.4)))
                                             ]),
-                                        backgroundColor: Get.theme.accentColor
+                                        backgroundColor: Get
+                                            .theme.colorScheme.secondary
                                             .withOpacity(0.15),
                                         shape: const StadiumBorder())),
                                 Text('From (%s)'.trArgs(['44']),

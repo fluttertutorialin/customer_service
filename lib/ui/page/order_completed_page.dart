@@ -52,7 +52,8 @@ class OrderCompletedPage extends StatelessWidget {
                         Expanded(
                             child: Text('time'.tr,
                                 style: context.textTheme.bodyText1)),
-                        Text('13:31 | 2020-11-05', style: context.textTheme.caption)
+                        Text('13:31 | 2020-11-05',
+                            style: context.textTheme.caption)
                       ]),
                       Row(children: [
                         Expanded(
@@ -65,14 +66,16 @@ class OrderCompletedPage extends StatelessWidget {
                             elevation: 0,
                             onPressed: () {},
                             shape: const StadiumBorder(),
-                            color: context.theme.accentColor.withOpacity(0.1),
+                            color: context.theme.colorScheme.secondary
+                                .withOpacity(0.1),
                             child: Text('rating'.tr,
                                 style: context.textTheme.subtitle1)),
                         MaterialButton(
                             elevation: 0,
                             onPressed: () {},
                             shape: const StadiumBorder(),
-                            color: context.theme.accentColor.withOpacity(0.1),
+                            color: context.theme.colorScheme.secondary
+                                .withOpacity(0.1),
                             child: Text('reBooking'.tr,
                                 style: context.textTheme.subtitle1))
                       ])

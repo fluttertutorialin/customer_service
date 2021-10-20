@@ -11,16 +11,16 @@ class BookServiceController extends GetxController {
 
   TextStyle? getTextTheme(bool selected) {
     if (selected) {
-      return Get.textTheme.bodyText2!.merge(TextStyle(color: Get.theme.primaryColor));
+      return Get.textTheme.bodyText2!
+          .merge(TextStyle(color: Get.theme.primaryColor));
     }
     return Get.textTheme.bodyText2;
   }
 
   Color? getColor(bool selected) {
     if (selected) {
-      return Get.theme.accentColor;
+      return Get.theme.colorScheme.secondary;
     }
     return null;
   }
-
 }

@@ -92,6 +92,7 @@ class _NotificationNewState extends State<NotificationNewPage>
                 child: Container(
                     color: Get.theme.primaryColor,
                     child: TabBar(
+                        indicatorColor: context.theme.colorScheme.secondary,
                         labelColor: Get.theme.hintColor,
                         tabs: _tabs.map((e) => Tab(text: e)).toList()))),
             flexibleSpace: _buildFlexibleSpaceBarWidget()),
@@ -125,7 +126,7 @@ class _NotificationNewState extends State<NotificationNewPage>
               children: [
                 Text('Notification Counter',
                     style: Get.textTheme.headline6!
-              .merge(TextStyle(color: Get.theme.primaryColor)),
+                        .merge(TextStyle(color: Get.theme.primaryColor)),
                     maxLines: 1,
                     overflow: TextOverflow.fade,
                     softWrap: false),
@@ -138,8 +139,10 @@ class _NotificationNewState extends State<NotificationNewPage>
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Text('Sent', style:  Get.textTheme.bodyText1!
-                                    .merge(const TextStyle(fontWeight: FontWeight.w600))),
+                                Text('Sent',
+                                    style: Get.textTheme.bodyText1!.merge(
+                                        const TextStyle(
+                                            fontWeight: FontWeight.w600))),
                                 const SizedBox(height: 8),
                                 Text('00',
                                     style: Get.textTheme.bodyText2!.merge(
@@ -157,8 +160,10 @@ class _NotificationNewState extends State<NotificationNewPage>
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Text('Today', style:  Get.textTheme.bodyText1!
-                                    .merge(const TextStyle(fontWeight: FontWeight.w600))),
+                                Text('Today',
+                                    style: Get.textTheme.bodyText1!.merge(
+                                        const TextStyle(
+                                            fontWeight: FontWeight.w600))),
                                 const SizedBox(height: 8),
                                 Text('00',
                                     style: Get.textTheme.bodyText2!.merge(
@@ -175,8 +180,10 @@ class _NotificationNewState extends State<NotificationNewPage>
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Text('Past', style:  Get.textTheme.bodyText1!
-                                    .merge(const TextStyle(fontWeight: FontWeight.w600))),
+                                Text('Past',
+                                    style: Get.textTheme.bodyText1!.merge(
+                                        const TextStyle(
+                                            fontWeight: FontWeight.w600))),
                                 const SizedBox(height: 8),
                                 Text('00',
                                     style: Get.textTheme.bodyText2!.merge(
@@ -186,7 +193,7 @@ class _NotificationNewState extends State<NotificationNewPage>
                 const SizedBox(height: 24),
                 MaxWidthRaisedButton(
                     width: double.infinity,
-                    color: Get.theme.accentColor,
+                    color: Get.theme.colorScheme.primary,
                     icon: Icon(Icons.add_rounded,
                         color: Get.theme.primaryColor, size: 20),
                     buttonText: 'ADD NOTIFICATION',

@@ -25,7 +25,6 @@ class SettingsService extends GetxService {
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
             elevation: 0, foregroundColor: Colors.white),
         brightness: Brightness.light,
-        accentColor: _parseColor(setting.value.mainColor),
         dividerColor: _parseColor(setting.value.accentColor, opacity: 0.1),
         focusColor: _parseColor(setting.value.accentColor),
         hintColor: _parseColor(setting.value.secondColor),
@@ -35,6 +34,7 @@ class SettingsService extends GetxService {
         colorScheme: ColorScheme.light(
             primary: _parseColor(setting.value.mainColor),
             secondary: _parseColor(setting.value.mainColor)),
+        unselectedWidgetColor: _parseColor(setting.value.mainDarkColor),
         textTheme: GoogleFonts.getTextTheme(
             _getLocale().toString().startsWith('ar') ? 'Cairo' : 'Poppins',
             TextTheme(
@@ -102,7 +102,7 @@ class SettingsService extends GetxService {
             const FloatingActionButtonThemeData(elevation: 0),
         scaffoldBackgroundColor: const Color(0xFF2C2C2C),
         brightness: Brightness.dark,
-        accentColor: _parseColor(setting.value.mainDarkColor),
+        //accentColor: _parseColor(setting.value.mainDarkColor),
         dividerColor: _parseColor(setting.value.accentDarkColor, opacity: 0.1),
         focusColor: _parseColor(setting.value.accentDarkColor),
         hintColor: _parseColor(setting.value.secondDarkColor),
@@ -113,6 +113,7 @@ class SettingsService extends GetxService {
         colorScheme: ColorScheme.dark(
             primary: _parseColor(setting.value.mainDarkColor),
             secondary: _parseColor(setting.value.mainDarkColor)),
+        unselectedWidgetColor: _parseColor(setting.value.mainDarkColor),
         textTheme: GoogleFonts.getTextTheme(
             _getLocale().toString().startsWith('ar') ? 'Cairo' : 'Poppins',
             TextTheme(
@@ -187,12 +188,15 @@ class SettingsService extends GetxService {
 
     switch (_themeMode) {
       case 'ThemeMode.light':
-        SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(systemNavigationBarColor: Colors.white),
+        SystemChrome.setSystemUIOverlayStyle(
+          SystemUiOverlayStyle.light
+              .copyWith(systemNavigationBarColor: Colors.white),
         );
         return ThemeMode.light;
       case 'ThemeMode.dark':
         SystemChrome.setSystemUIOverlayStyle(
-          SystemUiOverlayStyle.dark.copyWith(systemNavigationBarColor: Colors.black87),
+          SystemUiOverlayStyle.dark
+              .copyWith(systemNavigationBarColor: Colors.black87),
         );
         return ThemeMode.dark;
       case 'ThemeMode.system':
@@ -200,12 +204,14 @@ class SettingsService extends GetxService {
       default:
         if (setting.value.defaultTheme == 'dark') {
           SystemChrome.setSystemUIOverlayStyle(
-            SystemUiOverlayStyle.dark.copyWith(systemNavigationBarColor: Colors.black87),
+            SystemUiOverlayStyle.dark
+                .copyWith(systemNavigationBarColor: Colors.black87),
           );
           return ThemeMode.dark;
         } else {
           SystemChrome.setSystemUIOverlayStyle(
-            SystemUiOverlayStyle.light.copyWith(systemNavigationBarColor: Colors.white),
+            SystemUiOverlayStyle.light
+                .copyWith(systemNavigationBarColor: Colors.white),
           );
           return ThemeMode.light;
         }
