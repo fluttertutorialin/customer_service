@@ -76,7 +76,7 @@ class NotificationsPage extends StatelessWidget {
     ];
     return CustomListViewBuilder<NotificationAdmin>(
         items: notificationList,
-        itemBuilder: (context, notificationAdmin, i) {
+        itemBuilder: (context, notificationAdmin, index) {
           return const NotificationWidget();
         });
   }
