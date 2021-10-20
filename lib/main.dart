@@ -37,6 +37,7 @@ class _MyAppState extends State<MyApp> {
 
         //defaultTransition: Transition.fade,
         enableLog: true,
+
         navigatorKey: navigatorKey,
 
         //LOCALIZATIONS
