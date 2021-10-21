@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../util/extensions.dart';
 
 class NotificationWidget extends StatelessWidget {
   const NotificationWidget({Key? key}) : super(key: key);
@@ -69,21 +70,5 @@ class NotificationWidget extends StatelessWidget {
                 Text('26, February 2021 | 04::34', style: Get.textTheme.caption)
               ]))
         ]));
-  }
-
-  BoxDecoration getBoxDecoration(
-      {Color? color, double? radius, Border? border, Gradient? gradient}) {
-    return BoxDecoration(
-        color: color ?? Get.theme.primaryColor,
-        borderRadius: BorderRadius.all(Radius.circular(radius ?? 10)),
-        boxShadow: [
-          BoxShadow(
-              color: Get.theme.focusColor.withOpacity(0.1),
-              blurRadius: 10,
-              offset: const Offset(0, 5))
-        ],
-        border:
-            border ?? Border.all(color: Get.theme.focusColor.withOpacity(0.05)),
-        gradient: gradient);
   }
 }

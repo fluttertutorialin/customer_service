@@ -16,5 +16,4 @@ class OrderController extends GetxController {
   Future<void> getArchivedTasks() async {
 
   }
-
 }
